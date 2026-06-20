@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكابر العقارية للتجارة العامة والتوريدات</title>
+<meta name="description" content="أكابر العقارية للتجارة العامة والتوريدات - حلول متكاملة في الاستثمار العقاري والتجارة العامة والتوريدات">
+<meta name="keywords" content="توريدات مصر، تجارة عامة، استثمار عقاري، تسويق عقاري، عقارات مصر">
+<meta name="theme-color" content="#0A1628">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:white;color:#334155;font-family:"Cairo",sans-serif;font-weight:400;line-height:1.9;overflow-x:hidden;}
+
+/* ===== VARIABLES ===== */
+:root{
+  --gold:#C9A84C;--gold-light:#E0C06A;
+  --blue:#0A1628;--blue-mid:#112240;--blue-light:#1B3A6B;--blue-bright:#2563EB;
+  --white:#FFFFFF;--off:#F8FAFF;--gray:#EEF2F8;
+  --text:#334155;--muted:#64748B;
+  --shadow:0 4px 24px rgba(10,22,40,0.08);--shadow-lg:0 8px 40px rgba(10,22,40,0.14);
+}
+
+100%{width:100%;}}
+
+/* ===== PROGRESS BAR ===== */
+#pgbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(to right,var(--gold),var(--blue-bright));z-index:9998;width:0%;transition:width 0.15s;}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:10px 40px;background:var(--blue);border-bottom:1px solid rgba(255,255,255,0.07);box-shadow:0 2px 20px rgba(0,0,0,0.2);transition:padding 0.3s;}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-a{width:70px;height:70px;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:3rem;font-weight:900;display:flex;align-items:center;justify-content:center;line-height:1;filter:drop-shadow(0 0 8px rgba(201,168,76,0.35));}
+.nav-name{font-size:1.25rem;font-weight:900;color:var(--gold);line-height:1.2;}
+.nav-sub{font-size:0.68rem;color:rgba(255,255,255,0.6);font-weight:400;margin-top:2px;}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.83rem;font-weight:500;transition:color 0.2s;position:relative;padding-bottom:3px;}
+.nav-links a::after{content:"";position:absolute;bottom:0;right:0;width:0;height:2px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a:hover::after{width:100%;}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.lang-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:white;padding:6px 14px;font-family:"Cairo",sans-serif;font-size:0.75rem;font-weight:700;cursor:pointer;border-radius:6px;transition:all 0.2s;}
+.lang-btn:hover{background:var(--gold);color:var(--blue);border-color:var(--gold);}
+.nav-cta{background:var(--gold);color:var(--blue);padding:9px 20px;text-decoration:none;font-size:0.8rem;font-weight:700;border-radius:8px;transition:all 0.2s;white-space:nowrap;}
+.nav-cta:hover{background:var(--gold-light);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{width:22px;height:2px;background:white;border-radius:2px;transition:all 0.3s;display:block;}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu{position:fixed;inset:0;background:var(--blue);z-index:300;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.mobile-menu.open{opacity:1;pointer-events:auto;}
+.mobile-menu a{color:white;text-decoration:none;font-size:1.4rem;font-weight:700;transition:color 0.2s;}
+.mobile-menu a:hover{color:var(--gold);}
+.mob-close{position:absolute;top:20px;left:20px;background:none;border:none;color:white;font-size:1.8rem;cursor:pointer;line-height:1;}
+
+/* ===== HERO ===== */
+.hero{min-height:100svh;background:var(--blue);position:relative;display:flex;align-items:center;overflow:hidden;padding:120px 40px 80px;}
+.hero-shapes{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.hero-c1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.25),transparent);top:-80px;left:-60px;animation:hFloat 9s ease-in-out infinite;}
+.hero-c2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.12),transparent);bottom:-40px;right:80px;animation:hFloat 11s ease-in-out infinite reverse;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:55px 55px;}
+@keyframes hFloat{0%,100%{transform:translate(0,0);}50%{transform:translate(16px,-16px);}}
+.hero-content{position:relative;z-index:2;max-width:660px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);color:var(--gold);padding:7px 16px;border-radius:50px;font-size:0.76rem;font-weight:600;margin-bottom:24px;}
+.hero-badge::before{content:"●";font-size:0.5rem;animation:blink 1.5s step-end infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+h1.hero-title{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;color:white;margin-bottom:16px;}
+h1.hero-title em{font-style:normal;color:var(--gold);}
+.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.62);max-width:520px;line-height:2;margin-bottom:36px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--blue);padding:14px 32px;text-decoration:none;font-size:0.87rem;font-weight:700;border-radius:8px;transition:all 0.2s;display:inline-block;}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);}
+.btn-outline{background:rgba(255,255,255,0.07);color:white;padding:14px 28px;text-decoration:none;font-size:0.87rem;font-weight:600;border-radius:8px;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;display:inline-block;}
+.btn-outline:hover{background:rgba(255,255,255,0.13);}
+.hero-scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;z-index:2;}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollAnim 1.6s ease-in-out infinite;}
+@keyframes scrollAnim{0%,100%{opacity:0.3;transform:scaleY(0.8);}50%{opacity:1;transform:scaleY(1);}}
+
+/* ===== DIVIDER ===== */
+.divider{height:4px;background:linear-gradient(to right,var(--blue),var(--blue-bright),var(--gold));}
+.divider-light{height:1px;background:var(--gray);}
+
+/* ===== SECTIONS ===== */
+.section{padding:88px 40px;}
+.section-white{background:white;}
+.section-off{background:var(--off);}
+.section-blue{background:var(--blue);}
+.eyebrow{font-size:0.75rem;font-weight:700;color:var(--blue-bright);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--gold);flex-shrink:0;}
+.eyebrow.white{color:var(--gold);}
+.sec-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:900;color:var(--blue);line-height:1.25;margin-bottom:12px;}
+.sec-title em{font-style:normal;color:var(--blue-bright);}
+.sec-title.white{color:white;}
+.sec-title.white em{color:var(--gold);}
+.sec-desc{color:var(--muted);font-size:0.92rem;max-width:560px;line-height:2;}
+.sec-desc.white{color:rgba(255,255,255,0.6);}
+
+/* ===== STATS ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--blue);}
+.stat-item{background:rgba(255,255,255,0.03);padding:44px 28px;text-align:center;transition:background 0.3s;}
+.stat-item:hover{background:rgba(255,255,255,0.07);}
+.stat-num{font-size:2.6rem;font-weight:900;color:var(--gold);display:block;line-height:1;}
+.stat-lbl{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:8px;display:block;}
+
+/* ===== WHAT WE DO ===== */
+.wwd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.wwd-card{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray);transition:transform 0.3s,box-shadow 0.3s;}
+.wwd-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg);}
+.wwd-top{padding:34px 28px;}
+.wwd-card:nth-child(1) .wwd-top{background:linear-gradient(135deg,#0A1628,#1B3A6B);}
+.wwd-card:nth-child(2) .wwd-top{background:linear-gradient(135deg,#1a0800,#3d2000);}
+.wwd-card:nth-child(3) .wwd-top{background:linear-gradient(135deg,#0a1a0a,#1a3d1a);}
+.wwd-tag{background:rgba(255,255,255,0.13);color:rgba(255,255,255,0.85);padding:4px 14px;border-radius:50px;font-size:0.7rem;font-weight:700;display:inline-block;margin-bottom:14px;}
+.wwd-icon{font-size:2.6rem;margin-bottom:12px;display:block;}
+.wwd-title{font-size:1.1rem;font-weight:900;color:white;margin-bottom:8px;}
+.wwd-desc{font-size:0.81rem;color:rgba(255,255,255,0.62);line-height:1.9;}
+.wwd-bottom{background:white;padding:22px 28px;}
+.wwd-pts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px;}
+.wwd-pts li{font-size:0.77rem;color:var(--text);display:flex;align-items:center;gap:5px;}
+.wwd-pts li::before{content:"✓";color:var(--gold);font-weight:900;font-size:0.8rem;}
+.wwd-cta{display:block;text-align:center;padding:10px;border:2px solid var(--blue);border-radius:8px;color:var(--blue);text-decoration:none;font-weight:700;font-size:0.8rem;transition:all 0.2s;}
+.wwd-cta:hover{background:var(--blue);color:white;}
+
+/* ===== WHY US ===== */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;}
+.why-card{background:white;padding:32px 24px;border-radius:16px;border:1px solid var(--gray);box-shadow:var(--shadow);transition:all 0.3s;position:relative;overflow:hidden;}
+.why-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--blue-bright);}
+.why-icon{font-size:2.2rem;margin-bottom:14px;display:block;}
+.why-title{font-size:0.95rem;font-weight:700;color:var(--blue);margin-bottom:8px;}
+.why-text{font-size:0.8rem;color:var(--muted);line-height:2;}
+
+/* ===== SERVICES ===== */
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px;}
+.srv-card{background:white;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--gray);transition:all 0.3s;}
+.srv-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--blue-bright);}
+.srv-img{height:170px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;}
+.srv-card:nth-child(1) .srv-img{background:linear-gradient(135deg,#0A1628,#1B3A6B);}
+.srv-card:nth-child(2) .srv-img{background:linear-gradient(135deg,#0d1b2a,#1a3a5c);}
+.srv-card:nth-child(3) .srv-img{background:linear-gradient(135deg,#080818,#101040);}
+.srv-card:nth-child(4) .srv-img{background:linear-gradient(135deg,#1a0800,#3d2000);}
+.srv-card:nth-child(5) .srv-img{background:linear-gradient(135deg,#0a1a0a,#1a3d1a);}
+.srv-card:nth-child(6) .srv-img{background:linear-gradient(135deg,#0f0a00,#2a1800);}
+.srv-body{padding:20px 22px;}
+.srv-name{font-size:0.97rem;font-weight:700;color:var(--blue);margin-bottom:8px;}
+.srv-text{font-size:0.8rem;color:var(--muted);line-height:1.9;}
+.srv-link{display:inline-flex;align-items:center;gap:4px;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--blue-bright);text-decoration:none;}
+.srv-link:hover{gap:8px;}
+
+/* ===== GALLERY ===== */
+.gallery-wrap{overflow:hidden;-webkit-mask:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask:linear-gradient(to right,transparent,black 8%,black 92%,transparent);margin-top:48px;}
+.gallery-track{display:flex;gap:14px;width:max-content;}
+.gal-img{width:250px;height:165px;border-radius:12px;flex-shrink:0;border:2px solid rgba(201,168,76,0.12);transition:border-color 0.3s,transform 0.3s;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden;}
+.gal-img:hover{border-color:var(--gold);transform:scale(1.04);}
+.gal-img:nth-child(8n+1){background:linear-gradient(135deg,#0A1628,#1B3A6B);}
+.gal-img:nth-child(8n+2){background:linear-gradient(135deg,#1a0800,#3d2000);}
+.gal-img:nth-child(8n+3){background:linear-gradient(135deg,#0a1a0a,#1a3d1a);}
+.gal-img:nth-child(8n+4){background:linear-gradient(135deg,#080818,#101040);}
+.gal-img:nth-child(8n+5){background:linear-gradient(135deg,#0f0a00,#2a1800);}
+.gal-img:nth-child(8n+6){background:linear-gradient(135deg,#0d1b2a,#1a3a5c);}
+.gal-img:nth-child(8n+7){background:linear-gradient(135deg,#050510,#0a0a30);}
+.gal-img:nth-child(8n+8){background:linear-gradient(135deg,#0a0a0a,#1a1a1a);}
+.gal-lbl{position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(transparent,rgba(10,22,40,0.85));color:white;font-size:0.75rem;font-weight:600;}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:center;}
+.about-img-box{position:relative;}
+.about-img{width:100%;aspect-ratio:4/5;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:6rem;background:linear-gradient(135deg,var(--blue),var(--blue-light));position:relative;overflow:hidden;}
+.about-frame{position:absolute;top:-10px;right:-10px;bottom:10px;left:10px;border:2px solid rgba(201,168,76,0.25);border-radius:20px;pointer-events:none;z-index:0;}
+.about-badge{position:absolute;bottom:-16px;left:-16px;background:var(--blue);color:white;padding:18px 24px;border-radius:14px;box-shadow:var(--shadow-lg);z-index:2;}
+.about-badge-num{font-size:2rem;font-weight:900;color:var(--gold);line-height:1;}
+.about-badge-lbl{font-size:0.65rem;color:rgba(255,255,255,0.55);margin-top:2px;}
+.timeline{margin-top:32px;}
+.tl-item{display:flex;gap:16px;margin-bottom:22px;}
+.tl-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.tl-dot{width:13px;height:13px;border-radius:50%;background:var(--gold);border:2px solid white;box-shadow:0 0 0 3px rgba(201,168,76,0.25);}
+.tl-line{width:2px;flex:1;min-height:20px;background:linear-gradient(to bottom,var(--gold),var(--gray));margin-top:4px;}
+.tl-year{font-size:0.82rem;font-weight:700;color:var(--blue-bright);}
+.tl-text{font-size:0.8rem;color:var(--muted);line-height:1.9;margin-top:2px;}
+
+/* ===== TEAM ===== */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px;}
+.team-card{background:white;border-radius:18px;padding:36px 26px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--gray);transition:all 0.3s;position:relative;overflow:hidden;}
+.team-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--blue),var(--blue-bright));transform:scaleX(0);transition:transform 0.3s;}
+.team-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+.team-card:hover::before{transform:scaleX(1);}
+.team-av{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-bright));margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;font-weight:900;color:var(--gold);}
+.team-name{font-size:0.97rem;font-weight:700;color:var(--blue);margin-bottom:5px;}
+.team-role{font-size:0.68rem;font-weight:700;color:var(--blue-bright);background:var(--gray);display:inline-block;padding:3px 12px;border-radius:50px;margin-bottom:12px;}
+.team-bio{font-size:0.78rem;color:var(--muted);line-height:1.9;}
+
+/* ===== VISION ===== */
+.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px;}
+.vm-card{padding:48px 40px;border-radius:18px;position:relative;overflow:hidden;}
+.vm-blue{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);}
+.vm-gold{background:var(--gold);}
+.vm-lbl{font-size:0.7rem;font-weight:700;margin-bottom:12px;opacity:0.65;color:rgba(255,255,255,0.8);}
+.vm-gold .vm-lbl{color:rgba(10,22,40,0.65);}
+.vm-title{font-size:1.6rem;font-weight:900;color:white;margin-bottom:14px;}
+.vm-gold .vm-title{color:var(--blue);}
+.vm-text{font-size:0.87rem;color:rgba(255,255,255,0.65);line-height:2.1;}
+.vm-gold .vm-text{color:rgba(10,22,40,0.7);}
+.vm-deco{position:absolute;bottom:-28px;left:-8px;font-size:10rem;font-weight:900;opacity:0.05;line-height:1;color:white;user-select:none;}
+.vm-gold .vm-deco{color:var(--blue);}
+
+/* ===== REVIEWS ===== */
+.rev-track{display:flex;gap:18px;overflow-x:auto;padding-bottom:8px;scroll-behavior:smooth;scrollbar-width:none;}
+.rev-track::-webkit-scrollbar{display:none;}
+.rev-card{background:white;border-radius:14px;padding:28px 24px;min-width:300px;box-shadow:var(--shadow);border:1px solid var(--gray);flex-shrink:0;transition:border-color 0.3s;}
+.rev-card:hover{border-color:var(--gold);}
+.rev-stars{color:var(--gold);font-size:1rem;margin-bottom:12px;}
+.rev-text{font-size:0.83rem;color:var(--muted);line-height:2;margin-bottom:16px;font-style:italic;}
+.rev-name{font-size:0.83rem;font-weight:700;color:var(--blue);}
+.rev-role{font-size:0.7rem;color:var(--muted);}
+.rev-nav{display:flex;gap:10px;margin-top:20px;}
+.rev-btn{width:40px;height:40px;border-radius:50%;border:2px solid var(--gray);background:white;color:var(--blue);cursor:pointer;font-size:0.9rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center;}
+.rev-btn:hover{background:var(--blue);color:white;border-color:var(--blue);}
+.add-rev{background:var(--off);border-radius:16px;padding:32px 28px;margin-top:36px;border:1px solid var(--gray);}
+.add-rev h3{font-size:1.1rem;font-weight:700;color:var(--blue);margin-bottom:6px;}
+.add-rev p{font-size:0.8rem;color:var(--muted);margin-bottom:20px;}
+.rev-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.rev-form input,.rev-form textarea{background:white;border:1.5px solid var(--gray);color:var(--blue);padding:11px 14px;font-family:"Cairo",sans-serif;font-size:0.83rem;border-radius:8px;outline:none;transition:border-color 0.2s;}
+.rev-form input:focus,.rev-form textarea:focus{border-color:var(--blue-bright);}
+.rev-form textarea{grid-column:1/-1;resize:vertical;min-height:88px;}
+.rev-full{grid-column:1/-1;}
+.stars-row{display:flex;gap:6px;margin-bottom:4px;}
+.star-b{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--gray);transition:color 0.15s;line-height:1;}
+.star-b.on{color:var(--gold);}
+.btn-submit-rev{background:var(--blue);color:white;border:none;padding:11px 28px;font-family:"Cairo",sans-serif;font-size:0.83rem;font-weight:700;cursor:pointer;border-radius:8px;transition:background 0.2s;}
+.btn-submit-rev:hover{background:var(--blue-bright);}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:760px;margin:40px auto 0;}
+.faq-item{background:white;border-radius:12px;margin-bottom:10px;border:1px solid var(--gray);overflow:hidden;box-shadow:var(--shadow);}
+.faq-item.open{border-color:var(--blue-bright);}
+.faq-q{width:100%;background:none;border:none;color:var(--blue);font-family:"Cairo",sans-serif;font-size:0.92rem;font-weight:600;padding:18px 22px;text-align:right;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--gray);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--blue);transition:all 0.3s;flex-shrink:0;font-weight:700;}
+.faq-item.open .faq-icon{background:var(--blue);color:white;transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s;}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:18px;}
+.faq-a p{font-size:0.83rem;color:var(--muted);line-height:2;padding:0 22px;}
+
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:52px;align-items:start;margin-top:48px;}
+.contact-info{background:var(--blue);border-radius:18px;padding:36px 30px;}
+.contact-info h3{font-size:1.2rem;font-weight:700;color:white;margin-bottom:28px;}
+.c-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.c-icon{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.c-lbl{font-size:0.65rem;color:rgba(255,255,255,0.5);margin-bottom:3px;font-weight:700;}
+.c-val{font-size:0.87rem;color:white;}
+.c-val a{color:white;text-decoration:none;transition:color 0.2s;}
+.c-val a:hover{color:var(--gold);}
+.social-row{display:flex;gap:10px;margin-top:24px;}
+.soc-btn{width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;font-size:0.85rem;font-weight:700;transition:all 0.2s;}
+.soc-btn:hover{background:var(--gold);color:var(--blue);}
+.contact-form-box{background:white;border-radius:18px;padding:36px 30px;box-shadow:var(--shadow-lg);border:1px solid var(--gray);}
+.form-gr{margin-bottom:14px;}
+.form-gr label{display:block;font-size:0.74rem;font-weight:700;color:var(--blue);margin-bottom:6px;}
+.form-gr input,.form-gr textarea{width:100%;background:var(--off);border:1.5px solid var(--gray);color:var(--blue);padding:12px 14px;font-family:"Cairo",sans-serif;font-size:0.87rem;border-radius:9px;outline:none;transition:border-color 0.2s;}
+.form-gr input:focus,.form-gr textarea:focus{border-color:var(--blue-bright);background:white;}
+.form-gr textarea{resize:vertical;min-height:110px;}
+.btn-send{width:100%;background:var(--blue);color:white;border:none;padding:14px;font-family:"Cairo",sans-serif;font-size:0.88rem;font-weight:700;cursor:pointer;border-radius:9px;transition:all 0.2s;}
+.btn-send:hover{background:var(--blue-bright);transform:translateY(-1px);}
+.map-box{margin-top:16px;border-radius:10px;overflow:hidden;border:1px solid var(--gray);}
+.map-box iframe{width:100%;height:200px;border:none;}
+
+/* ===== TRUSTED ===== */
+.trusted{background:var(--off);padding:32px 40px;text-align:center;border-top:1px solid var(--gray);}
+.trusted-lbl{font-size:0.72rem;font-weight:700;color:var(--muted);margin-bottom:18px;}
+.trusted-logos{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.trusted-logo{background:white;border:1px solid var(--gray);padding:8px 18px;border-radius:8px;font-size:0.82rem;color:var(--muted);font-weight:600;}
+
+/* ===== FOOTER ===== */
+footer{background:var(--blue);padding:52px 40px 24px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-logo-a{font-size:2rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;}
+.footer-name{font-size:0.95rem;font-weight:700;color:var(--gold);}
+.footer-sub{font-size:0.6rem;color:rgba(255,255,255,0.4);margin-bottom:12px;}
+.footer-desc{font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:2;max-width:240px;}
+.trust-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.trust-badge{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:5px 10px;border-radius:7px;font-size:0.68rem;color:rgba(255,255,255,0.5);}
+.footer-col h4{font-size:0.74rem;font-weight:700;color:rgba(255,255,255,0.85);margin-bottom:16px;padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:9px;}
+.footer-col a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;}
+.footer-col a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.35);}
+
+/* ===== FLOATING ===== */
+.float-wa{position:fixed;bottom:28px;left:20px;z-index:500;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 18px rgba(37,211,102,0.45);animation:waPulse 2.2s ease-in-out infinite;}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,0.45);}50%{box-shadow:0 4px 28px rgba(37,211,102,0.7),0 0 0 8px rgba(37,211,102,0.08);}}
+.back-top{position:fixed;bottom:28px;right:20px;z-index:500;width:42px;height:42px;background:var(--blue);border:none;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.9rem;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.back-top.show{opacity:1;pointer-events:auto;}
+.back-top:hover{background:var(--blue-bright);}
+.float-consult{position:fixed;bottom:92px;left:20px;z-index:500;background:var(--blue);color:white;padding:8px 12px;text-decoration:none;font-size:0.68rem;font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);border-radius:0 8px 8px 0;box-shadow:var(--shadow-lg);transition:background 0.2s;}
+.float-consult:hover{background:var(--blue-bright);}
+
+/* ===== CHAT ===== */
+.chat-bubble{position:fixed;bottom:90px;right:20px;z-index:500;width:52px;height:52px;background:linear-gradient(135deg,var(--blue),var(--blue-bright));border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 18px rgba(37,99,235,0.4);font-size:1.3rem;transition:transform 0.2s;}
+.chat-bubble:hover{transform:scale(1.1);}
+.chat-win{position:fixed;bottom:155px;right:20px;width:320px;max-height:460px;background:white;border-radius:18px;box-shadow:0 16px 50px rgba(10,22,40,0.18);z-index:600;display:flex;flex-direction:column;overflow:hidden;transform:scale(0.85) translateY(16px);opacity:0;pointer-events:none;transition:all 0.28s cubic-bezier(0.34,1.56,0.64,1);transform-origin:bottom right;}
+.chat-win.open{transform:scale(1) translateY(0);opacity:1;pointer-events:auto;}
+.chat-head{background:linear-gradient(135deg,var(--blue),var(--blue-bright));padding:14px 18px;display:flex;align-items:center;gap:10px;}
+.chat-av{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.chat-hname{font-size:0.87rem;font-weight:700;color:white;}
+.chat-hstatus{font-size:0.68rem;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:4px;}
+.chat-hstatus::before{content:"";width:6px;height:6px;border-radius:50%;background:#4ade80;}
+.chat-x{background:none;border:none;color:rgba(255,255,255,0.65);font-size:1.1rem;cursor:pointer;margin-right:auto;}
+.chat-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px;max-height:260px;}
+.chat-msg{max-width:82%;padding:9px 13px;border-radius:12px;font-size:0.8rem;line-height:1.6;}
+.chat-msg.bot{background:var(--off);color:var(--blue);border-radius:4px 12px 12px 12px;align-self:flex-start;}
+.chat-msg.usr{background:var(--blue);color:white;border-radius:12px 4px 12px 12px;align-self:flex-end;}
+.chat-typing{display:flex;gap:4px;align-items:center;padding:9px 13px;background:var(--off);border-radius:4px 12px 12px 12px;align-self:flex-start;}
+.chat-typing span{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:typDot 1.2s ease-in-out infinite;}
+.chat-typing span:nth-child(2){animation-delay:0.2s;}
+.chat-typing span:nth-child(3){animation-delay:0.4s;}
+@keyframes typDot{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-5px);}}
+.chat-qrow{padding:7px 14px;display:flex;gap:5px;flex-wrap:wrap;border-top:1px solid var(--gray);}
+.chat-qbtn{background:var(--off);border:1px solid var(--gray);color:var(--blue);padding:5px 10px;border-radius:18px;font-size:0.72rem;cursor:pointer;font-family:"Cairo",sans-serif;transition:all 0.2s;}
+.chat-qbtn:hover{background:var(--blue);color:white;border-color:var(--blue);}
+.chat-inrow{padding:10px 14px;border-top:1px solid var(--gray);display:flex;gap:7px;}
+.chat-in{flex:1;background:var(--off);border:1px solid var(--gray);border-radius:8px;padding:9px 12px;font-family:"Cairo",sans-serif;font-size:0.8rem;outline:none;color:var(--blue);}
+.chat-in:focus{border-color:var(--blue-bright);}
+.chat-send{width:36px;height:36px;background:var(--blue);border:none;border-radius:8px;color:white;cursor:pointer;font-size:0.9rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;flex-shrink:0;}
+.chat-send:hover{background:var(--blue-bright);}
+
+/* ===== COOKIE ===== */
+.cookie{position:fixed;bottom:0;left:0;right:0;background:var(--blue);color:white;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:800;transform:translateY(100%);transition:transform 0.35s;border-top:2px solid var(--gold);flex-wrap:wrap;}
+.cookie.show{transform:translateY(0);}
+.cookie-txt{font-size:0.8rem;color:rgba(255,255,255,0.8);flex:1;}
+.cookie-btns{display:flex;gap:8px;flex-shrink:0;}
+.cookie-ok{background:var(--gold);color:var(--blue);border:none;padding:8px 18px;font-family:"Cairo",sans-serif;font-size:0.8rem;font-weight:700;cursor:pointer;border-radius:6px;}
+.cookie-no{background:transparent;color:rgba(255,255,255,0.55);border:1px solid rgba(255,255,255,0.18);padding:8px 14px;font-family:"Cairo",sans-serif;font-size:0.8rem;cursor:pointer;border-radius:6px;}
+
+/* ===== REVEAL ===== */
+.rev-el{opacity:0;transform:translateY(20px);transition:opacity 0.45s ease,transform 0.45s ease;}
+.rev-el.on{opacity:1;transform:translateY(0);}
+.rev-d1{transition-delay:0.07s;}
+.rev-d2{transition-delay:0.14s;}
+.rev-d3{transition-delay:0.21s;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  nav{padding:8px 16px;}
+  .nav-logo-a{width:54px;height:54px;font-size:2.4rem;}
+  .nav-name{font-size:1rem;}
+  .nav-sub{font-size:0.6rem;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero{padding:100px 20px 60px;}
+  h1.hero-title{font-size:2rem;}
+  .hero-sub{font-size:0.88rem;}
+  .hero-btns{flex-direction:column;}
+  .btn-gold,.btn-outline{width:100%;text-align:center;padding:13px 20px;}
+  .hero-scroll{display:none;}
+  .section{padding:56px 20px;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .wwd-grid,.srv-grid,.team-grid,.vm-grid,.contact-grid,.footer-top{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .about-grid{grid-template-columns:1fr;gap:36px;}
+  .about-frame{display:none;}
+  .rev-form{grid-template-columns:1fr;}
+  .rev-form textarea,.rev-full{grid-column:1;}
+  .trusted{padding:28px 20px;}
+  footer{padding:40px 20px 20px;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .float-wa{width:50px;height:50px;font-size:1.3rem;bottom:20px;left:14px;}
+  .float-consult{display:none;}
+  .back-top{bottom:20px;right:14px;width:38px;height:38px;}
+  .chat-bubble{right:14px;bottom:80px;width:48px;height:48px;}
+  .chat-win{width:calc(100vw - 28px);right:14px;bottom:140px;}
+  .cookie{padding:14px 18px;flex-direction:column;align-items:flex-start;}
+}
+@media(min-width:769px) and (max-width:1024px){
+  nav{padding:10px 28px;}
+  .section{padding:72px 36px;}
+  .stats-grid{grid-template-columns:repeat(4,1fr);}
+  .wwd-grid{grid-template-columns:repeat(3,1fr);}
+  .srv-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+  <div class="ld-name">أكابر العقارية</div>
+  <div class="ld-sub">للتجارة العامة والتوريدات</div>
+  <div class="ld-bar"><div class="ld-bar-fill"></div></div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div id="pgbar"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-brand">
+    <div class="nav-logo-a">A</div>
+    <div>
+      <div class="nav-name" id="navName">أكابر</div>
+      <div class="nav-sub" id="navSub">العقارية للتجارة العامة والتوريدات</div>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#whatwedo">ماذا نعمل</a></li>
+    <li><a href="#why">لماذا نحن</a></li>
+    <li><a href="#services">خدماتنا</a></li>
+    <li><a href="#about">من نحن</a></li>
+    <li><a href="#team">الإدارة</a></li>
+    <li><a href="#contact">تواصل</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <a href="#contact" class="nav-cta" id="navCta">استشارة مجانية</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mob-close" onclick="toggleMenu()">✕</button>
+  <a href="#whatwedo" onclick="toggleMenu()" id="mm0">ماذا نعمل</a>
+  <a href="#why" onclick="toggleMenu()" id="mm1">لماذا نحن</a>
+  <a href="#services" onclick="toggleMenu()" id="mm2">خدماتنا</a>
+  <a href="#about" onclick="toggleMenu()" id="mm3">من نحن</a>
+  <a href="#team" onclick="toggleMenu()" id="mm4">الإدارة</a>
+  <a href="#contact" onclick="toggleMenu()" id="mm5">تواصل</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-shapes">
+    <div class="hero-c1"></div>
+    <div class="hero-c2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge" id="heroBadge">منذ الخمسينيات · إرث تجاري عريق</div>
+    <h1 class="hero-title" id="heroTitle">شركاؤك في <em>النجاح والتميز</em> والنمو</h1>
+    <p class="hero-sub" id="heroSub">أكابر العقارية للتجارة العامة والتوريدات — حلول متكاملة في الاستثمار العقاري، التجارة العامة، والتوريدات المتخصصة. خبرة تجاوزت سبعة عقود.</p>
+    <div class="hero-btns">
+      <a href="#whatwedo" class="btn-gold" id="heroBtnP">اكتشف ماذا نعمل</a>
+      <a href="#about" class="btn-outline" id="heroBtnG">تعرف علينا</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STATS -->
+<div class="stats-grid">
+  <div class="stat-item rev-el"><span class="stat-num" id="st1">٧٠+</span><span class="stat-lbl" id="st1l">عاماً من الخبرة</span></div>
+  <div class="stat-item rev-el rev-d1"><span class="stat-num" id="st2">٣</span><span class="stat-lbl" id="st2l">أجيال متعاقبة</span></div>
+  <div class="stat-item rev-el rev-d2"><span class="stat-num" id="st3">٤</span><span class="stat-lbl" id="st3l">دول في المنطقة</span></div>
+  <div class="stat-item rev-el rev-d3"><span class="stat-num" id="st4">٢٠٢٤</span><span class="stat-lbl" id="st4l">الهوية الجديدة</span></div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHAT WE DO -->
+<section class="section section-white" id="whatwedo">
+  <div class="eyebrow rev-el" id="wwdEye">ماذا نعمل</div>
+  <h2 class="sec-title rev-el rev-d1" id="wwdTitle">نحن <em>شركاء نجاحك</em></h2>
+  <p class="sec-desc rev-el rev-d2" id="wwdDesc">أكابر منظومة متكاملة تجمع ثلاثة محاور رئيسية — كل منهم قائم بذاته ومكمل للآخر.</p>
+  <div class="wwd-grid">
+    <div class="wwd-card rev-el">
+      <div class="wwd-top">
+        <span class="wwd-tag" id="wt1">العقارات</span>
+        <span class="wwd-icon">🏛️</span>
+        <div class="wwd-title" id="wwd1t">الاستثمار والتسويق العقاري</div>
+        <p class="wwd-desc" id="wwd1d">نساعدك في شراء وبيع وتسويق وإدارة العقارات وتحقيق أفضل العوائد الاستثمارية في مصر والمنطقة.</p>
+      </div>
+      <div class="wwd-bottom">
+        <ul class="wwd-pts" id="wwd1p">
+          <li>استثمار عقاري مدروس</li><li>تسويق احترافي</li>
+          <li>شراء وبيع بشفافية</li><li>إدارة الأصول</li>
+        </ul>
+        <a href="#contact" class="wwd-cta" id="wwd1cta">تواصل معنا ←</a>
+      </div>
+    </div>
+    <div class="wwd-card rev-el rev-d1">
+      <div class="wwd-top">
+        <span class="wwd-tag" id="wt2">التجارة</span>
+        <span class="wwd-icon">📦</span>
+        <div class="wwd-title" id="wwd2t">التجارة العامة والاستيراد</div>
+        <p class="wwd-desc" id="wwd2d">خبرة تجاوزت ٧٠ عاماً في التجارة العامة بأسواق مصر والخليج مع شبكة علاقات تجارية راسخة.</p>
+      </div>
+      <div class="wwd-bottom">
+        <ul class="wwd-pts" id="wwd2p">
+          <li>تجارة عامة متنوعة</li><li>استيراد وتصدير</li>
+          <li>علاقات إقليمية واسعة</li><li>خبرة +٧٠ عاماً</li>
+        </ul>
+        <a href="#contact" class="wwd-cta" id="wwd2cta">تواصل معنا ←</a>
+      </div>
+    </div>
+    <div class="wwd-card rev-el rev-d2">
+      <div class="wwd-top">
+        <span class="wwd-tag" id="wt3">التوريدات</span>
+        <span class="wwd-icon">⚙️</span>
+        <div class="wwd-title" id="wwd3t">التوريدات والمشتريات</div>
+        <p class="wwd-desc" id="wwd3d">نوفر جميع احتياجات مشروعك من مواد البناء والتشطيبات بجودة عالية وأسعار تنافسية.</p>
+      </div>
+      <div class="wwd-bottom">
+        <ul class="wwd-pts" id="wwd3p">
+          <li>توريدات التشطيبات</li><li>مواد البناء</li>
+          <li>إدارة المشتريات</li><li>توريدات المشروعات</li>
+        </ul>
+        <a href="#contact" class="wwd-cta" id="wwd3cta">تواصل معنا ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-light"></div>
+
+<!-- WHY US -->
+<section class="section section-off" id="why">
+  <div class="eyebrow rev-el" id="whyEye">لماذا أكابر</div>
+  <h2 class="sec-title rev-el rev-d1" id="whyTitle">لماذا <em>تختارنا؟</em></h2>
+  <p class="sec-desc rev-el rev-d2" id="whyDesc">نجمع بين الخبرة الممتدة لعقود والرؤية العصرية لنقدم أفضل الحلول.</p>
+  <div class="why-grid">
+    <div class="why-card rev-el"><span class="why-icon">🏆</span><div class="why-title" id="why1t">خبرة +٧٠ عاماً</div><p class="why-text" id="why1d">إرث تجاري عائلي عريق يمتد عبر ثلاثة أجيال من العمل والاحتراف</p></div>
+    <div class="why-card rev-el rev-d1"><span class="why-icon">🤝</span><div class="why-title" id="why2t">ثقة ومصداقية</div><p class="why-text" id="why2d">التزام تام بالجودة والشفافية في جميع تعاملاتنا مع العملاء</p></div>
+    <div class="why-card rev-el rev-d2"><span class="why-icon">🌍</span><div class="why-title" id="why3t">حضور إقليمي</div><p class="why-text" id="why3d">شبكة علاقات في مصر والسعودية والإمارات والكويت</p></div>
+    <div class="why-card rev-el rev-d3"><span class="why-icon">💡</span><div class="why-title" id="why4t">حلول متكاملة</div><p class="why-text" id="why4d">نغطي دورة المشروع كاملة من الفكرة حتى التسليم</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="section section-white" id="services">
+  <div class="eyebrow rev-el" id="srvEye">خدماتنا</div>
+  <h2 class="sec-title rev-el rev-d1" id="srvTitle">مجالات <em>عملنا</em></h2>
+  <p class="sec-desc rev-el rev-d2" id="srvDesc">منظومة متكاملة تشمل العقارات والتجارة العامة والتوريدات.</p>
+  <div class="srv-grid">
+    <div class="srv-card rev-el"><div class="srv-img">🏛️</div><div class="srv-body"><div class="srv-name" id="s1n">الاستثمار العقاري</div><p class="srv-text" id="s1d">دراسة الفرص الاستثمارية وتقديم الحلول التي تحقق أعلى قيمة مضافة.</p><a href="#contact" class="srv-link" id="s1l">اعرف أكثر</a></div></div>
+    <div class="srv-card rev-el rev-d1"><div class="srv-img">📐</div><div class="srv-body"><div class="srv-name" id="s2n">التسويق العقاري</div><p class="srv-text" id="s2d">خدمات تسويق متكاملة تساعد المستثمرين على تحقيق أفضل العوائد.</p><a href="#contact" class="srv-link" id="s2l">اعرف أكثر</a></div></div>
+    <div class="srv-card rev-el rev-d2"><div class="srv-img">🤝</div><div class="srv-body"><div class="srv-name" id="s3n">شراء وبيع العقارات</div><p class="srv-text" id="s3d">إتمام صفقات عقارية بكفاءة وشفافية من الأراضي للوحدات التجارية.</p><a href="#contact" class="srv-link" id="s3l">اعرف أكثر</a></div></div>
+    <div class="srv-card rev-el"><div class="srv-img">📦</div><div class="srv-body"><div class="srv-name" id="s4n">التجارة العامة</div><p class="srv-text" id="s4d">خبرة موسّعة في التجارة العامة بمختلف القطاعات الإقليمية.</p><a href="#contact" class="srv-link" id="s4l">اعرف أكثر</a></div></div>
+    <div class="srv-card rev-el rev-d1"><div class="srv-img">🏗️</div><div class="srv-body"><div class="srv-name" id="s5n">توريدات التشطيبات</div><p class="srv-text" id="s5d">مستلزمات التشطيبات الداخلية والخارجية للمنتج النهائي المتكامل.</p><a href="#contact" class="srv-link" id="s5l">اعرف أكثر</a></div></div>
+    <div class="srv-card rev-el rev-d2"><div class="srv-img">⚙️</div><div class="srv-body"><div class="srv-name" id="s6n">التوريدات العمومية</div><p class="srv-text" id="s6d">توريدات متخصصة للمشروعات مع إدارة المشتريات الإنشائية.</p><a href="#contact" class="srv-link" id="s6l">اعرف أكثر</a></div></div>
+  </div>
+</section>
+
+<div class="divider-light"></div>
+
+<!-- GALLERY -->
+<section class="section section-off" id="gallery">
+  <div class="eyebrow rev-el" id="galEye">معرض الأعمال</div>
+  <h2 class="sec-title rev-el rev-d1" id="galTitle">أنشطتنا <em>ومجالاتنا</em></h2>
+  <p class="sec-desc rev-el rev-d2" id="galDesc">نغطي دورة المشروع كاملة من الاستثمار حتى التسليم.</p>
+  <div class="gallery-wrap rev-el">
+    <div class="gallery-track" id="gtrack1">
+      <div class="gal-img">🏛️<div class="gal-lbl" id="gl1">عقارات</div></div>
+      <div class="gal-img">📈<div class="gal-lbl" id="gl2">استثمار</div></div>
+      <div class="gal-img">📐<div class="gal-lbl" id="gl3">تسويق</div></div>
+      <div class="gal-img">📦<div class="gal-lbl" id="gl4">تجارة عامة</div></div>
+      <div class="gal-img">⚙️<div class="gal-lbl" id="gl5">توريدات</div></div>
+      <div class="gal-img">🏗️<div class="gal-lbl" id="gl6">تشطيبات</div></div>
+      <div class="gal-img">🤝<div class="gal-lbl" id="gl7">مشاريع</div></div>
+      <div class="gal-img">🌍<div class="gal-lbl" id="gl8">القاهرة</div></div>
+      <div class="gal-img">🏛️<div class="gal-lbl">عقارات</div></div>
+      <div class="gal-img">📈<div class="gal-lbl">استثمار</div></div>
+      <div class="gal-img">📐<div class="gal-lbl">تسويق</div></div>
+      <div class="gal-img">📦<div class="gal-lbl">تجارة</div></div>
+    </div>
+  </div>
+  <div class="gallery-wrap rev-el rev-d1" style="margin-top:14px;">
+    <div class="gallery-track" id="gtrack2">
+      <div class="gal-img">🌍<div class="gal-lbl">القاهرة</div></div>
+      <div class="gal-img">🏗️<div class="gal-lbl">تشطيبات</div></div>
+      <div class="gal-img">⚙️<div class="gal-lbl">توريدات</div></div>
+      <div class="gal-img">📦<div class="gal-lbl">تجارة</div></div>
+      <div class="gal-img">🤝<div class="gal-lbl">مشاريع</div></div>
+      <div class="gal-img">📐<div class="gal-lbl">تسويق</div></div>
+      <div class="gal-img">📈<div class="gal-lbl">استثمار</div></div>
+      <div class="gal-img">🏛️<div class="gal-lbl">عقارات</div></div>
+      <div class="gal-img">🌍<div class="gal-lbl">القاهرة</div></div>
+      <div class="gal-img">🏗️<div class="gal-lbl">تشطيبات</div></div>
+      <div class="gal-img">⚙️<div class="gal-lbl">توريدات</div></div>
+      <div class="gal-img">📦<div class="gal-lbl">تجارة</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section class="section section-white" id="about">
+  <div class="about-grid">
+    <div class="about-img-box rev-el">
+      <div class="about-img">🏢</div>
+      <div class="about-frame"></div>
+      <div class="about-badge">
+        <div class="about-badge-num" id="abNum">٧٠+</div>
+        <div class="about-badge-lbl" id="abLbl">عاماً من الخبرة</div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow rev-el" id="abtEye">من نحن</div>
+      <h2 class="sec-title rev-el rev-d1" id="abtTitle">رحلة <em>النجاح</em></h2>
+      <p class="sec-desc rev-el rev-d2" id="abtDesc">أكابر ليست مجرد شركة — بل امتداد لإرث تجاري عائلي عريق بدأ في خمسينيات القرن الماضي وتطور عبر ثلاثة أجيال.</p>
+      <div class="timeline rev-el rev-d3">
+        <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-year" id="tly1">الخمسينيات</div><div class="tl-text" id="tlt1">تأسيس شركة أولاد حشيش للتجارة والتوزيع — حجر الأساس للإرث التجاري العائلي</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-year" id="tly2">١٩٩٦</div><div class="tl-text" id="tlt2">تأسيس شركة دلتا للمواد الغذائية وإضافة نشاط الاستثمار العقاري عام ١٩٩٩</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-year" id="tly3">٢٠٠٤</div><div class="tl-text" id="tlt3">التوسع للمملكة العربية السعودية في السياحة وإدارة الفنادق والاستيراد</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div></div><div><div class="tl-year" id="tly4">٢٠٢٤</div><div class="tl-text" id="tlt4">إطلاق الهوية الجديدة "أكابر العقارية للتجارة العامة والتوريدات"</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-light"></div>
+
+<!-- TEAM -->
+<section class="section section-off" id="team">
+  <div class="eyebrow rev-el" id="teamEye">الإدارة</div>
+  <h2 class="sec-title rev-el rev-d1" id="teamTitle">الفريق <em>التنفيذي</em></h2>
+  <p class="sec-desc rev-el rev-d2" id="teamDesc">يجمع فريقنا بين خبرة المؤسس الممتدة لثلاثة عقود ورؤية الجيل الجديد.</p>
+  <div class="team-grid">
+    <div class="team-card rev-el"><div class="team-av">أ</div><div class="team-name" id="tm1n">أحمد أمين السباعي حشيش</div><div class="team-role" id="tm1r">المؤسس والرئيس التنفيذي</div><p class="team-bio" id="tm1b">خبرة أكثر من ثلاثة عقود في التجارة والاستثمار وإدارة المشروعات مع شبكة إقليمية واسعة.</p></div>
+    <div class="team-card rev-el rev-d1"><div class="team-av">ع</div><div class="team-name" id="tm2n">عابد أحمد السباعي</div><div class="team-role" id="tm2r">نائب المدير · مدير المشروعات</div><p class="team-bio" id="tm2b">يشرف على متابعة المشروعات والتطوير والتنفيذ بدقة وكفاءة عالية.</p></div>
+    <div class="team-card rev-el rev-d2"><div class="team-av">م</div><div class="team-name" id="tm3n">معاذ أحمد السباعي</div><div class="team-role" id="tm3r">نائب المدير · مدير التسويق</div><p class="team-bio" id="tm3b">يقود استراتيجيات التسويق وتطوير الأعمال وتعزيز حضور الشركة في السوق.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VISION -->
+<section class="section section-blue" id="vision">
+  <div class="eyebrow white rev-el" id="visEye">رؤيتنا ورسالتنا</div>
+  <h2 class="sec-title white rev-el rev-d1" id="visTitle">قيمنا <em>وأهدافنا</em></h2>
+  <div class="vm-grid">
+    <div class="vm-card vm-blue rev-el">
+      <div class="vm-deco">R</div>
+      <div class="vm-lbl" id="vm1l">رؤيتنا</div>
+      <div class="vm-title" id="vm1t">أن نكون الاختيار الأول</div>
+      <p class="vm-text" id="vm1d">أن تكون أكابر من الشركات الرائدة في التجارة العامة والاستثمار العقاري والتوريدات، ونموذجاً للثقة والتميز.</p>
+    </div>
+    <div class="vm-card vm-gold rev-el rev-d1">
+      <div class="vm-deco">M</div>
+      <div class="vm-lbl" id="vm2l">رسالتنا</div>
+      <div class="vm-title" id="vm2t">حلول متكاملة لنجاح مستدام</div>
+      <p class="vm-text" id="vm2d">تقديم حلول عقارية وتجارية متكاملة تساهم في نجاح المشروعات وتحقيق أفضل الفرص الاستثمارية.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- REVIEWS -->
+<section class="section section-off" id="reviews">
+  <div class="eyebrow rev-el" id="revEye">آراء العملاء</div>
+  <h2 class="sec-title rev-el rev-d1" id="revTitle">ماذا يقول <em>عملاؤنا</em></h2>
+  <p class="sec-desc rev-el rev-d2" id="revDesc">شاركنا تجربتك مع أكابر العقارية.</p>
+  <div class="rev-track rev-el" id="revTrack">
+    <div class="rev-card">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text" id="revPlaceholder">"كن أول من يشارك تجربته مع أكابر العقارية"</p>
+      <div class="rev-name">—</div>
+    </div>
+  </div>
+  <div class="rev-nav">
+    <button class="rev-btn" onclick="document.getElementById('revTrack').scrollLeft-=320">→</button>
+    <button class="rev-btn" onclick="document.getElementById('revTrack').scrollLeft+=320">←</button>
+  </div>
+  <div class="add-rev rev-el rev-d2">
+    <h3 id="addRevTitle">شارك تجربتك</h3>
+    <p id="addRevDesc">رأيك يساعدنا على التطوير المستمر</p>
+    <div class="rev-form">
+      <input type="text" id="rName" placeholder="اسمك الكريم">
+      <input type="text" id="rRole" placeholder="مجال التعامل">
+      <div class="rev-full">
+        <div class="stars-row" id="starsRow">
+          <button class="star-b on" onclick="setStar(1)">★</button>
+          <button class="star-b on" onclick="setStar(2)">★</button>
+          <button class="star-b on" onclick="setStar(3)">★</button>
+          <button class="star-b on" onclick="setStar(4)">★</button>
+          <button class="star-b on" onclick="setStar(5)">★</button>
+        </div>
+      </div>
+      <textarea id="rText" class="rev-full" placeholder="شاركنا تجربتك..."></textarea>
+      <div class="rev-full" style="text-align:left;">
+        <button class="btn-submit-rev" onclick="submitRev()" id="revSubmitBtn">إرسال التقييم</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-light"></div>
+
+<!-- FAQ -->
+<section class="section section-white" id="faq">
+  <div style="text-align:center;margin-bottom:8px;">
+    <div class="eyebrow rev-el" style="justify-content:center;" id="faqEye">الأسئلة الشائعة</div>
+    <h2 class="sec-title rev-el rev-d1" id="faqTitle">أسئلة <em>يسألها عملاؤنا</em></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item rev-el"><button class="faq-q" onclick="toggleFaq(this)"><span id="fq1">ما هي مجالات عمل شركة أكابر؟</span><span class="faq-icon">+</span></button><div class="faq-a"><p id="fa1">تعمل أكابر في ثلاثة محاور: الاستثمار والتسويق العقاري، التجارة العامة والاستيراد، والتوريدات المتخصصة للمشروعات.</p></div></div>
+    <div class="faq-item rev-el rev-d1"><button class="faq-q" onclick="toggleFaq(this)"><span id="fq2">كيف يمكنني التواصل مع الشركة؟</span><span class="faq-icon">+</span></button><div class="faq-a"><p id="fa2">يمكنك التواصل عبر واتساب على الرقم 01121787677، أو البريد الإلكتروني mmzalsebaeii18@gmail.com، أو نموذج التواصل في الموقع.</p></div></div>
+    <div class="faq-item rev-el rev-d2"><button class="faq-q" onclick="toggleFaq(this)"><span id="fq3">هل تقدمون خدماتكم خارج مصر؟</span><span class="faq-icon">+</span></button><div class="faq-a"><p id="fa3">نعم، لدينا خبرة وعلاقات تجارية في السعودية والإمارات والكويت ونرحب بالتعاون الإقليمي.</p></div></div>
+    <div class="faq-item rev-el rev-d3"><button class="faq-q" onclick="toggleFaq(this)"><span id="fq4">ما الذي يميز أكابر عن غيرها؟</span><span class="faq-icon">+</span></button><div class="faq-a"><p id="fa4">نجمع بين إرث تجاري يتجاوز 70 عاماً والرؤية العصرية، مع حلول متكاملة تغطي دورة المشروع كاملة.</p></div></div>
+    <div class="faq-item rev-el rev-d3"><button class="faq-q" onclick="toggleFaq(this)"><span id="fq5">هل تقدمون استشارات مجانية؟</span><span class="faq-icon">+</span></button><div class="faq-a"><p id="fa5">نعم، نقدم استشارة أولية مجانية لجميع عملائنا الجدد. تواصل معنا الآن على واتساب 01121787677.</p></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="section section-off" id="contact">
+  <div class="eyebrow rev-el" id="ctaEye">تواصل معنا</div>
+  <h2 class="sec-title rev-el rev-d1" id="ctaTitle">نحن هنا <em>لخدمتك</em></h2>
+  <div class="contact-grid">
+    <div class="rev-el">
+      <div class="contact-info">
+        <h3 id="contactInfoTitle">بيانات التواصل</h3>
+        <div class="c-item"><div class="c-icon">📞</div><div><div class="c-lbl" id="cLbl1">هاتف</div><div class="c-val"><a href="tel:+201121787677">01121787677</a></div></div></div>
+        <div class="c-item"><div class="c-icon">💬</div><div><div class="c-lbl" id="cLbl2">واتساب</div><div class="c-val"><a href="https://wa.me/201121787677">01121787677</a></div></div></div>
+        <div class="c-item"><div class="c-icon">📧</div><div><div class="c-lbl" id="cLbl3">البريد الإلكتروني</div><div class="c-val"><a href="mailto:mmzalsebaeii18@gmail.com">mmzalsebaeii18@gmail.com</a></div></div></div>
+        <div class="c-item"><div class="c-icon">📍</div><div><div class="c-lbl" id="cLbl4">الموقع</div><div class="c-val" id="cAddr">مدينة الرحاب، القاهرة، مصر</div></div></div>
+        <div class="social-row"><a href="https://www.facebook.com/share/18iKDaAMwz/" target="_blank" class="soc-btn">f</a></div>
+      </div>
+      <div class="map-box" style="margin-top:16px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453!2d31.48!3d30.13!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cf04f7c5f3f%3A0xa0b4d14e58d08524!2sAl+Rehab+City!5e0!3m2!1sar!2seg!4v1" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="contact-form-box rev-el rev-d2">
+      <div class="form-gr"><label id="fLbl1">الاسم الكريم</label><input type="text" id="cName" placeholder="اسمك"></div>
+      <div class="form-gr"><label id="fLbl2">رقم الهاتف</label><input type="tel" id="cPhone" placeholder="رقمك"></div>
+      <div class="form-gr"><label id="fLbl3">البريد الإلكتروني</label><input type="email" id="cEmail" placeholder="بريدك"></div>
+      <div class="form-gr"><label id="fLbl4">رسالتك</label><textarea id="cMsg" placeholder="كيف يمكننا مساعدتك؟"></textarea></div>
+      <button class="btn-send" onclick="sendWA()" id="sendBtn">إرسال عبر واتساب</button>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED -->
+<div class="trusted">
+  <div class="trusted-lbl" id="trustedLbl">نعمل مع شركاء في</div>
+  <div class="trusted-logos">
+    <div class="trusted-logo" id="tl1">🇪🇬 مصر</div>
+    <div class="trusted-logo" id="tl2">🇸🇦 السعودية</div>
+    <div class="trusted-logo" id="tl3">🇦🇪 الإمارات</div>
+    <div class="trusted-logo" id="tl4">🇰🇼 الكويت</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-a">A</div>
+      <div class="footer-name" id="ftName">أكابر العقارية</div>
+      <div class="footer-sub" id="ftSub">للتجارة العامة والتوريدات</div>
+      <p class="footer-desc" id="ftDesc">شركة متخصصة في الاستثمار العقاري والتجارة العامة والتوريدات منذ خمسينيات القرن الماضي.</p>
+      <div class="trust-badges">
+        <div class="trust-badge">🔒 SSL Secured</div>
+        <div class="trust-badge">✅ Verified</div>
+        <div class="trust-badge">🏆 70+ Years</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc1h">خدماتنا</h4>
+      <ul>
+        <li><a href="#services" id="fc1l1">الاستثمار العقاري</a></li>
+        <li><a href="#services" id="fc1l2">التسويق العقاري</a></li>
+        <li><a href="#services" id="fc1l3">التجارة العامة</a></li>
+        <li><a href="#services" id="fc1l4">التوريدات</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc2h">الشركة</h4>
+      <ul>
+        <li><a href="#about" id="fc2l1">من نحن</a></li>
+        <li><a href="#team" id="fc2l2">الفريق</a></li>
+        <li><a href="#vision" id="fc2l3">رؤيتنا</a></li>
+        <li><a href="#reviews" id="fc2l4">العملاء</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc3h">تواصل</h4>
+      <ul>
+        <li><a href="https://wa.me/201121787677" id="fc3l1">واتساب</a></li>
+        <li><a href="mailto:mmzalsebaeii18@gmail.com" id="fc3l2">البريد</a></li>
+        <li><a href="https://www.facebook.com/share/18iKDaAMwz/" target="_blank" id="fc3l3">فيسبوك</a></li>
+        <li><a href="#contact" id="fc3l4">استشارة مجانية</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy" id="ftCopy">© 2024 شركة أكابر العقارية للتجارة العامة والتوريدات. جميع الحقوق محفوظة.</p>
+    <p class="footer-copy">akabereg.com</p>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<a href="https://wa.me/201121787677" class="float-wa" target="_blank">💬</a>
+<a href="#contact" class="float-consult" id="floatConsult">استشارة مجانية</a>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- CHAT -->
+<div class="chat-bubble" onclick="toggleChat()">💬</div>
+<div class="chat-win" id="chatWin">
+  <div class="chat-head">
+    <div class="chat-av">🤖</div>
+    <div>
+      <div class="chat-hname" id="chatName">مساعد أكابر الذكي</div>
+      <div class="chat-hstatus" id="chatStatus">متاح الآن · يرد فوراً</div>
+    </div>
+    <button class="chat-x" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs"></div>
+  <div class="chat-qrow" id="chatQrow"></div>
+  <div class="chat-inrow">
+    <input class="chat-in" id="chatIn" placeholder="اكتب سؤالك...">
+    <button class="chat-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<!-- COOKIE -->
+<div class="cookie" id="cookieBar">
+  <div class="cookie-txt" id="cookieTxt">نستخدم ملفات تعريف الارتباط لتحسين تجربتك.</div>
+  <div class="cookie-btns">
+    <button class="cookie-ok" onclick="acceptCookie()" id="cookieOk">قبول</button>
+    <button class="cookie-no" onclick="document.getElementById('cookieBar').classList.remove('show')" id="cookieNo">لاحقاً</button>
+  </div>
+</div>
+
+<script>
+// ===== SIMPLE CLEAN JS - NO TEMPLATE LITERALS =====
+
+// TRANSLATIONS
+var T = {
+  ar: {
+    dir:"rtl", lang:"ar",
+    navName:"أكابر", navSub:"العقارية للتجارة العامة والتوريدات",
+    navLinks:["ماذا نعمل","لماذا نحن","خدماتنا","من نحن","الإدارة","تواصل"],
+    navCta:"استشارة مجانية",
+    heroBadge:"منذ الخمسينيات · إرث تجاري عريق",
+    heroTitle:"شركاؤك في <em>النجاح والتميز</em> والنمو",
+    heroSub:"أكابر العقارية — حلول متكاملة في الاستثمار العقاري والتجارة العامة والتوريدات. خبرة تجاوزت سبعة عقود.",
+    heroBtnP:"اكتشف ماذا نعمل", heroBtnG:"تعرف علينا",
+    st1:"٧٠+", st1l:"عاماً من الخبرة", st2:"٣", st2l:"أجيال متعاقبة",
+    st3:"٤", st3l:"دول في المنطقة", st4:"٢٠٢٤", st4l:"الهوية الجديدة",
+    wwdEye:"ماذا نعمل", wwdTitle:"نحن <em>شركاء نجاحك</em>",
+    wwdDesc:"أكابر منظومة متكاملة تجمع ثلاثة محاور رئيسية.",
+    wt1:"العقارات", wwd1t:"الاستثمار والتسويق العقاري",
+    wwd1d:"نساعدك في شراء وبيع وتسويق وإدارة العقارات.",
+    wt2:"التجارة", wwd2t:"التجارة العامة والاستيراد",
+    wwd2d:"خبرة تجاوزت ٧٠ عاماً في التجارة العامة.",
+    wt3:"التوريدات", wwd3t:"التوريدات والمشتريات",
+    wwd3d:"نوفر جميع احتياجات مشروعك بجودة عالية.",
+    wwd1cta:"تواصل معنا ←", wwd2cta:"تواصل معنا ←", wwd3cta:"تواصل معنا ←",
+    whyEye:"لماذا أكابر", whyTitle:"لماذا <em>تختارنا؟</em>",
+    whyDesc:"نجمع بين الخبرة الممتدة لعقود والرؤية العصرية.",
+    why1t:"خبرة +٧٠ عاماً", why1d:"إرث تجاري عائلي عريق يمتد عبر ثلاثة أجيال",
+    why2t:"ثقة ومصداقية", why2d:"التزام تام بالجودة والشفافية في جميع تعاملاتنا",
+    why3t:"حضور إقليمي", why3d:"شبكة علاقات في مصر والسعودية والإمارات والكويت",
+    why4t:"حلول متكاملة", why4d:"نغطي دورة المشروع كاملة من الفكرة حتى التسليم",
+    srvEye:"خدماتنا", srvTitle:"مجالات <em>عملنا</em>",
+    srvDesc:"منظومة متكاملة تشمل العقارات والتجارة والتوريدات.",
+    s1n:"الاستثمار العقاري", s1d:"دراسة الفرص الاستثمارية وتحقيق أعلى قيمة مضافة.", s1l:"اعرف أكثر",
+    s2n:"التسويق العقاري", s2d:"خدمات تسويق متكاملة لتحقيق أفضل العوائد.", s2l:"اعرف أكثر",
+    s3n:"شراء وبيع العقارات", s3d:"إتمام صفقات عقارية بكفاءة وشفافية.", s3l:"اعرف أكثر",
+    s4n:"التجارة العامة", s4d:"خبرة موسعة في التجارة بمختلف القطاعات.", s4l:"اعرف أكثر",
+    s5n:"توريدات التشطيبات", s5d:"مستلزمات التشطيبات للمنتج النهائي.", s5l:"اعرف أكثر",
+    s6n:"التوريدات العمومية", s6d:"توريدات متخصصة مع إدارة المشتريات.", s6l:"اعرف أكثر",
+    galEye:"معرض الأعمال", galTitle:"أنشطتنا <em>ومجالاتنا</em>",
+    galDesc:"نغطي دورة المشروع كاملة.",
+    gl1:"عقارات", gl2:"استثمار", gl3:"تسويق", gl4:"تجارة عامة",
+    gl5:"توريدات", gl6:"تشطيبات", gl7:"مشاريع", gl8:"القاهرة",
+    abtEye:"من نحن", abtTitle:"رحلة <em>النجاح</em>",
+    abtDesc:"أكابر امتداد لإرث تجاري عائلي عريق بدأ في خمسينيات القرن الماضي.",
+    abNum:"٧٠+", abLbl:"عاماً من الخبرة",
+    tly1:"الخمسينيات", tlt1:"تأسيس شركة أولاد حشيش للتجارة — حجر الأساس للإرث التجاري",
+    tly2:"١٩٩٦", tlt2:"تأسيس شركة دلتا وإضافة الاستثمار العقاري عام ١٩٩٩",
+    tly3:"٢٠٠٤", tlt3:"التوسع للسعودية في السياحة وإدارة الفنادق",
+    tly4:"٢٠٢٤", tlt4:'إطلاق الهوية الجديدة "أكابر العقارية"',
+    teamEye:"الإدارة", teamTitle:"الفريق <em>التنفيذي</em>",
+    teamDesc:"يجمع فريقنا بين خبرة المؤسس ورؤية الجيل الجديد.",
+    tm1n:"أحمد أمين السباعي حشيش", tm1r:"المؤسس والرئيس التنفيذي",
+    tm1b:"خبرة أكثر من ثلاثة عقود في التجارة والاستثمار وإدارة المشروعات.",
+    tm2n:"عابد أحمد السباعي", tm2r:"نائب المدير · مدير المشروعات",
+    tm2b:"يشرف على متابعة المشروعات والتطوير والتنفيذ.",
+    tm3n:"معاذ أحمد السباعي", tm3r:"نائب المدير · مدير التسويق",
+    tm3b:"يقود استراتيجيات التسويق وتطوير الأعمال.",
+    visEye:"رؤيتنا ورسالتنا", visTitle:"قيمنا <em>وأهدافنا</em>",
+    vm1l:"رؤيتنا", vm1t:"أن نكون الاختيار الأول",
+    vm1d:"أن تكون أكابر من الشركات الرائدة في التجارة والاستثمار والتوريدات.",
+    vm2l:"رسالتنا", vm2t:"حلول متكاملة لنجاح مستدام",
+    vm2d:"تقديم حلول عقارية وتجارية متكاملة لنجاح المشروعات.",
+    revEye:"آراء العملاء", revTitle:"ماذا يقول <em>عملاؤنا</em>",
+    revDesc:"شاركنا تجربتك مع أكابر.",
+    revPlaceholder:'"كن أول من يشارك تجربته مع أكابر العقارية"',
+    addRevTitle:"شارك تجربتك", addRevDesc:"رأيك يساعدنا على التطوير",
+    revSubmitBtn:"إرسال التقييم",
+    faqEye:"الأسئلة الشائعة", faqTitle:"أسئلة <em>يسألها عملاؤنا</em>",
+    fq1:"ما هي مجالات عمل أكابر؟", fa1:"تعمل في الاستثمار العقاري، التجارة العامة، والتوريدات المتخصصة.",
+    fq2:"كيف أتواصل مع الشركة؟", fa2:"واتساب: 01121787677 | البريد: mmzalsebaeii18@gmail.com",
+    fq3:"هل تعملون خارج مصر؟", fa3:"نعم، في السعودية والإمارات والكويت.",
+    fq4:"ما الذي يميز أكابر؟", fa4:"إرث +70 عاماً مع رؤية عصرية وحلول متكاملة.",
+    fq5:"هل تقدمون استشارات مجانية؟", fa5:"نعم! تواصل الآن على 01121787677",
+    ctaEye:"تواصل معنا", ctaTitle:"نحن هنا <em>لخدمتك</em>",
+    contactInfoTitle:"بيانات التواصل",
+    cLbl1:"هاتف", cLbl2:"واتساب", cLbl3:"البريد الإلكتروني", cLbl4:"الموقع",
+    cAddr:"مدينة الرحاب، القاهرة، مصر",
+    fLbl1:"الاسم الكريم", fLbl2:"رقم الهاتف", fLbl3:"البريد الإلكتروني", fLbl4:"رسالتك",
+    sendBtn:"إرسال عبر واتساب",
+    trustedLbl:"نعمل مع شركاء في",
+    tl1:"🇪🇬 مصر", tl2:"🇸🇦 السعودية", tl3:"🇦🇪 الإمارات", tl4:"🇰🇼 الكويت",
+    ftName:"أكابر العقارية", ftSub:"للتجارة العامة والتوريدات",
+    ftDesc:"شركة متخصصة في الاستثمار العقاري والتجارة العامة والتوريدات منذ الخمسينيات.",
+    fc1h:"خدماتنا", fc1l1:"الاستثمار العقاري", fc1l2:"التسويق العقاري", fc1l3:"التجارة العامة", fc1l4:"التوريدات",
+    fc2h:"الشركة", fc2l1:"من نحن", fc2l2:"الفريق", fc2l3:"رؤيتنا", fc2l4:"العملاء",
+    fc3h:"تواصل", fc3l1:"واتساب", fc3l2:"البريد", fc3l3:"فيسبوك", fc3l4:"استشارة مجانية",
+    ftCopy:"© 2024 شركة أكابر العقارية. جميع الحقوق محفوظة.",
+    chatName:"مساعد أكابر الذكي", chatStatus:"متاح الآن · يرد فوراً",
+    floatConsult:"استشارة مجانية",
+    cookieTxt:"نستخدم ملفات تعريف الارتباط لتحسين تجربتك.",
+    cookieOk:"قبول", cookieNo:"لاحقاً",
+    mm:["ماذا نعمل","لماذا نحن","خدماتنا","من نحن","الإدارة","تواصل"],
+    chatQ:["خدماتنا","تواصل معنا","الاستثمار العقاري","التوريدات","استشارة مجانية"]
+  },
+  en: {
+    dir:"ltr", lang:"en",
+    navName:"Akaber", navSub:"Real Estate · Trading · Supplies",
+    navLinks:["What We Do","Why Us","Services","About","Team","Contact"],
+    navCta:"Free Consultation",
+    heroBadge:"Since the 1950s · A Proud Legacy",
+    heroTitle:"Your Partners in <em>Excellence & Success</em> and Growth",
+    heroSub:"Akaber Real Estate for General Trading & Supplies — Integrated solutions in real estate, trading, and specialized supplies. 70+ years of expertise.",
+    heroBtnP:"Discover What We Do", heroBtnG:"About Us",
+    st1:"70+", st1l:"Years of Experience", st2:"3", st2l:"Generations",
+    st3:"4", st3l:"Regional Countries", st4:"2024", st4l:"New Identity",
+    wwdEye:"What We Do", wwdTitle:"We Are Your <em>Success Partners</em>",
+    wwdDesc:"Akaber is an integrated system combining three main pillars.",
+    wt1:"Real Estate", wwd1t:"Investment & Real Estate Marketing",
+    wwd1d:"We help you buy, sell, market and manage properties for best returns.",
+    wt2:"Trading", wwd2t:"General Trading & Import/Export",
+    wwd2d:"70+ years of experience in general trading across Egypt and Gulf markets.",
+    wt3:"Supplies", wwd3t:"Supplies & Procurement",
+    wwd3d:"We provide all your project needs with high quality and competitive prices.",
+    wwd1cta:"Contact Us →", wwd2cta:"Contact Us →", wwd3cta:"Contact Us →",
+    whyEye:"Why Akaber", whyTitle:"Why <em>Choose Us?</em>",
+    whyDesc:"We combine decades of experience with modern vision.",
+    why1t:"70+ Years Experience", why1d:"A proud family business legacy spanning three generations",
+    why2t:"Trust & Integrity", why2d:"Full commitment to quality and transparency in all dealings",
+    why3t:"Regional Presence", why3d:"Business network in Egypt, Saudi Arabia, UAE and Kuwait",
+    why4t:"Integrated Solutions", why4d:"We cover the full project cycle from idea to final delivery",
+    srvEye:"Our Services", srvTitle:"Our <em>Fields of Work</em>",
+    srvDesc:"An integrated system covering real estate, trading and supplies.",
+    s1n:"Real Estate Investment", s1d:"Analyzing opportunities to maximize added value.", s1l:"Learn More",
+    s2n:"Real Estate Marketing", s2d:"Integrated marketing to achieve the best returns.", s2l:"Learn More",
+    s3n:"Buy & Sell Properties", s3d:"Completing real estate deals efficiently.", s3l:"Learn More",
+    s4n:"General Trading", s4d:"Experience in trading across various regional sectors.", s4l:"Learn More",
+    s5n:"Finishing Supplies", s5d:"Interior and exterior finishing materials.", s5l:"Learn More",
+    s6n:"General Supplies", s6d:"Specialized project supplies and procurement.", s6l:"Learn More",
+    galEye:"Portfolio", galTitle:"Our Activities <em>& Fields</em>",
+    galDesc:"We cover the full project cycle.",
+    gl1:"Real Estate", gl2:"Investment", gl3:"Marketing", gl4:"General Trading",
+    gl5:"Supplies", gl6:"Finishing", gl7:"Projects", gl8:"Cairo",
+    abtEye:"About Us", abtTitle:"Our <em>Success Story</em>",
+    abtDesc:"Akaber is an extension of a proud family trading legacy since the 1950s.",
+    abNum:"70+", abLbl:"Years of Experience",
+    tly1:"1950s", tlt1:"Founded Awlad Hasheesh for Trading — the cornerstone of the family legacy",
+    tly2:"1996", tlt2:"Founded Delta Trading, added real estate investment in 1999",
+    tly3:"2004", tlt3:"Expanded to Saudi Arabia in tourism and hotel management",
+    tly4:"2024", tlt4:"Launched new identity: Akaber Real Estate",
+    teamEye:"Our Team", teamTitle:"Executive <em>Team</em>",
+    teamDesc:"Our team combines the founder's experience with the new generation's vision.",
+    tm1n:"Ahmed Amin Al-Subaei Hasheesh", tm1r:"Founder & CEO",
+    tm1b:"Over three decades of experience in commerce, investment and project management.",
+    tm2n:"Abed Ahmed Al-Subaei", tm2r:"Deputy Director · Projects Manager",
+    tm2b:"Oversees project follow-up, development and execution.",
+    tm3n:"Moaz Ahmed Al-Subaei", tm3r:"Deputy Director · Marketing Manager",
+    tm3b:"Leads marketing strategies and business development.",
+    visEye:"Vision & Mission", visTitle:"Our Values <em>& Goals</em>",
+    vm1l:"Our Vision", vm1t:"To Be the First Choice",
+    vm1d:"For Akaber to be a leading company in trading, real estate and supplies.",
+    vm2l:"Our Mission", vm2t:"Integrated Solutions for Sustainable Success",
+    vm2d:"Providing integrated solutions that contribute to project success.",
+    revEye:"Client Reviews", revTitle:"What Our <em>Clients Say</em>",
+    revDesc:"Share your experience with Akaber.",
+    revPlaceholder:'"Be the first to share your experience with Akaber Real Estate"',
+    addRevTitle:"Share Your Experience", addRevDesc:"Your feedback helps us improve",
+    revSubmitBtn:"Submit Review",
+    faqEye:"FAQ", faqTitle:"Questions Our <em>Clients Ask</em>",
+    fq1:"What are Akaber's fields of work?", fa1:"Real estate investment, general trading, and specialized supplies.",
+    fq2:"How can I contact the company?", fa2:"WhatsApp: +20 01121787677 | Email: mmzalsebaeii18@gmail.com",
+    fq3:"Do you work outside Egypt?", fa3:"Yes, we have presence in Saudi Arabia, UAE and Kuwait.",
+    fq4:"What makes Akaber different?", fa4:"70+ year legacy combined with modern vision and integrated solutions.",
+    fq5:"Do you offer free consultations?", fa5:"Yes! Contact us now on WhatsApp: +20 01121787677",
+    ctaEye:"Contact Us", ctaTitle:"We Are Here <em>to Serve You</em>",
+    contactInfoTitle:"Contact Details",
+    cLbl1:"Phone", cLbl2:"WhatsApp", cLbl3:"Email", cLbl4:"Location",
+    cAddr:"Rehab City, Cairo, Egypt",
+    fLbl1:"Your Name", fLbl2:"Phone Number", fLbl3:"Email Address", fLbl4:"Your Message",
+    sendBtn:"Send via WhatsApp",
+    trustedLbl:"We work with partners in",
+    tl1:"🇪🇬 Egypt", tl2:"🇸🇦 Saudi Arabia", tl3:"🇦🇪 UAE", tl4:"🇰🇼 Kuwait",
+    ftName:"Akaber Real Estate", ftSub:"General Trading & Supplies",
+    ftDesc:"Specialized in real estate investment, general trading and supplies since the 1950s.",
+    fc1h:"Services", fc1l1:"Real Estate Investment", fc1l2:"Real Estate Marketing", fc1l3:"General Trading", fc1l4:"Supplies",
+    fc2h:"Company", fc2l1:"About Us", fc2l2:"Team", fc2l3:"Vision", fc2l4:"Reviews",
+    fc3h:"Contact", fc3l1:"WhatsApp", fc3l2:"Email", fc3l3:"Facebook", fc3l4:"Free Consultation",
+    ftCopy:"© 2024 Akaber Real Estate. All rights reserved.",
+    chatName:"Akaber AI Assistant", chatStatus:"Online now · Instant reply",
+    floatConsult:"Free Consultation",
+    cookieTxt:"We use cookies to improve your experience.",
+    cookieOk:"Accept", cookieNo:"Later",
+    mm:["What We Do","Why Us","Services","About","Team","Contact"],
+    chatQ:["Our Services","Contact Us","Real Estate","Supplies","Free Consultation"]
+  }
+};
+
+var lang = "ar";
+
+function applyLang() {
+  var t = T[lang];
+  document.documentElement.dir = t.dir;
+  document.documentElement.lang = t.lang;
+  document.title = lang === "ar" ? "أكابر العقارية للتجارة العامة والتوريدات" : "Akaber Real Estate | Trading & Supplies";
+  document.getElementById("langBtn").textContent = lang === "ar" ? "EN" : "عر";
+  // Apply all translations
+  var keys = Object.keys(t);
+  for (var i = 0; i < keys.length; i++) {
+    var k = keys[i];
+    var el = document.getElementById(k);
+    if (el && typeof t[k] === "string") {
+      el.innerHTML = t[k];
+    }
+  }
+  // Nav links
+  var nl = document.getElementById("navLinks");
+  var hrefs = ["#whatwedo","#why","#services","#about","#team","#contact"];
+  nl.innerHTML = "";
+  for (var j = 0; j < t.navLinks.length; j++) {
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.href = hrefs[j];
+    a.textContent = t.navLinks[j];
+    li.appendChild(a);
+    nl.appendChild(li);
+  }
+  // Mobile menu
+  for (var m = 0; m < t.mm.length; m++) {
+    var mmEl = document.getElementById("mm" + m);
+    if (mmEl) mmEl.textContent = t.mm[m];
+  }
+  // Chat
+  document.getElementById("chatIn").placeholder = lang === "ar" ? "اكتب سؤالك..." : "Type your question...";
+  // Rebuild chat quick buttons if chat initialized
+  buildChatQBtns();
+}
+
+function toggleLang() {
+  lang = lang === "ar" ? "en" : "ar";
+  applyLang();
+}
+
+// ===== LOADER =====
+
+
+// ===== SCROLL =====
+var backTop = document.getElementById("backTop");
+var pgbar = document.getElementById("pgbar");
+window.addEventListener("scroll", function() {
+  var pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  pgbar.style.width = pct + "%";
+  if (window.scrollY > 350) backTop.classList.add("show");
+  else backTop.classList.remove("show");
+}, {passive: true});
+
+// ===== REVEAL =====
+function observeReveals() {
+  var els = document.querySelectorAll(".rev-el");
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add("on"); obs.unobserve(e.target); }
+    });
+  }, {threshold: 0.08, rootMargin: "0px 0px -30px 0px"});
+  els.forEach(function(el) { obs.observe(el); });
+}
+
+// ===== MOBILE MENU =====
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  var btn = document.getElementById("hamburger");
+  menu.classList.toggle("open");
+  btn.classList.toggle("open");
+  document.body.style.overflow = menu.classList.contains("open") ? "hidden" : "";
+}
+
+// ===== FAQ =====
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains("open");
+  var all = document.querySelectorAll(".faq-item");
+  for (var i = 0; i < all.length; i++) all[i].classList.remove("open");
+  if (!isOpen) item.classList.add("open");
+}
+
+// ===== REVIEWS =====
+var selStar = 5;
+function setStar(n) {
+  selStar = n;
+  var btns = document.querySelectorAll(".star-b");
+  for (var i = 0; i < btns.length; i++) {
+    if (i < n) btns[i].classList.add("on");
+    else btns[i].classList.remove("on");
+  }
+}
+function submitRev() {
+  var name = document.getElementById("rName").value.trim();
+  var role = document.getElementById("rRole").value.trim();
+  var text = document.getElementById("rText").value.trim();
+  if (!name || !text) { alert(lang === "ar" ? "يرجى كتابة اسمك وتقييمك" : "Please enter your name and review."); return; }
+  var stars = "";
+  for (var i = 0; i < selStar; i++) stars += "★";
+  for (var j = selStar; j < 5; j++) stars += "☆";
+  var track = document.getElementById("revTrack");
+  var card = document.createElement("div");
+  card.className = "rev-card";
+  card.innerHTML = "<div class='rev-stars'>" + stars + "</div><p class='rev-text'>"" + text + ""</p><div class='rev-name'>" + name + "</div><div class='rev-role'>" + (role || "") + "</div>";
+  track.appendChild(card);
+  document.getElementById("rName").value = "";
+  document.getElementById("rRole").value = "";
+  document.getElementById("rText").value = "";
+  setStar(5);
+  setTimeout(function() { track.scrollLeft = track.scrollWidth; }, 100);
+  alert(lang === "ar" ? "شكراً على تقييمك! 🌟" : "Thank you for your review! 🌟");
+}
+
+// ===== WHATSAPP FORM =====
+function sendWA() {
+  var name = document.getElementById("cName").value;
+  var phone = document.getElementById("cPhone").value;
+  var msg = document.getElementById("cMsg").value;
+  var txt = encodeURIComponent((lang === "ar" ? "مرحباً، أنا " : "Hello, I am ") + name + " - " + (lang === "ar" ? "هاتف: " : "Phone: ") + phone + " - " + msg);
+  window.open("https://wa.me/201121787677?text=" + txt, "_blank");
+}
+
+// ===== GALLERY SCROLL =====
+var g1 = document.getElementById("gtrack1");
+var g2 = document.getElementById("gtrack2");
+var p1 = 0, p2 = 0;
+var g1paused = false, g2paused = false;
+if (g1) {
+  g1.parentElement.addEventListener("mouseenter", function() { g1paused = true; });
+  g1.parentElement.addEventListener("mouseleave", function() { g1paused = false; });
+}
+if (g2) {
+  g2.parentElement.addEventListener("mouseenter", function() { g2paused = true; });
+  g2.parentElement.addEventListener("mouseleave", function() { g2paused = false; });
+}
+function animGallery() {
+  if (g1 && !g1paused) {
+    p1 += 0.8;
+    var w1 = g1.scrollWidth / 2;
+    if (p1 >= w1) p1 = 0;
+    g1.style.transform = "translateX(-" + p1 + "px)";
+  }
+  if (g2 && !g2paused) {
+    p2 -= 0.6;
+    var w2 = g2.scrollWidth / 2;
+    if (Math.abs(p2) >= w2) p2 = 0;
+    g2.style.transform = "translateX(" + p2 + "px)";
+  }
+  requestAnimationFrame(animGallery);
+}
+animGallery();
+
+// ===== AI CHAT =====
+var chatOpen = false;
+var chatInited = false;
+var KB_AR = {
+  "مرحبا|اهلا|هلو|السلام": "أهلاً وسهلاً! 👋 أنا مساعد أكابر الذكي. كيف أساعدك؟",
+  "خدمات|تعملوا|نشاط": "نعمل في 3 محاور: الاستثمار العقاري، التجارة العامة، والتوريدات المتخصصة. هل تريد معرفة المزيد؟",
+  "عقار|شقة|ارض|عقارات": "نتخصص في الاستثمار والتسويق العقاري وشراء وبيع العقارات في مصر. هل تريد التواصل مع فريقنا؟",
+  "توريد|مواد|تشطيب": "نوفر توريدات متكاملة للمشروعات ومستلزمات التشطيبات. هل تريد عرض سعر؟",
+  "تجارة|استيراد|تصدير": "لدينا خبرة +70 عاماً في التجارة العامة مع شبكة إقليمية واسعة.",
+  "تواصل|رقم|هاتف|واتساب": "تواصل معنا: 📞 01121787677 | 📧 mmzalsebaeii18@gmail.com | 📍 الرحاب، القاهرة",
+  "موقع|عنوان|فين": "مقرنا في مدينة الرحاب، القاهرة. ونخدم أيضاً السعودية والإمارات والكويت.",
+  "مؤسس|رئيس|احمد": "المؤسس هو أحمد أمين السباعي حشيش بخبرة +30 عاماً، ويساعده نجلاه عابد ومعاذ.",
+  "تاريخ|خبرة|سنة|قديم": "بدأنا في الخمسينيات مع شركة أولاد حشيش، وتطورنا لأكابر العقارية في 2024. +70 عاماً من الخبرة!",
+  "سعر|تكلفة|كام": "الأسعار تختلف حسب الخدمة. تواصل معنا على واتساب 01121787677 لعرض مخصص.",
+  "استشارة|مجانية": "نعم! نقدم استشارة أولية مجانية. تواصل الآن على 01121787677 🎉",
+  "سعودية|امارات|كويت|خليج": "نعم! لدينا حضور وخبرة في السعودية والإمارات والكويت.",
+  "شكرا|ممتاز|رائع": "شكراً! 😊 أكابر دائماً في خدمتك على 01121787677"
+};
+var KB_EN = {
+  "hi|hello|hey": "Hello! 👋 I'm Akaber's AI Assistant. How can I help you?",
+  "services|work|do": "We work in 3 areas: Real Estate Investment, General Trading, and Specialized Supplies.",
+  "real estate|property|apartment": "We specialize in real estate investment, marketing and buy/sell in Egypt. Want to talk to our team?",
+  "supplies|materials|construction": "We provide complete project supplies and finishing materials. Want a price quote?",
+  "trading|import|export": "We have 70+ years of experience in general trading with a wide regional network.",
+  "contact|phone|whatsapp|email": "Contact us: 📞 +20 01121787677 | 📧 mmzalsebaeii18@gmail.com | 📍 Rehab, Cairo",
+  "location|address|where": "Headquarters in Rehab City, Cairo. We also serve Saudi Arabia, UAE and Kuwait.",
+  "founder|ceo|ahmed": "Our founder is Ahmed Amin Al-Subaei Hasheesh with 30+ years of experience.",
+  "history|years|experience": "Founded in the 1950s with Awlad Hasheesh Co., evolved into Akaber in 2024 — 70+ years!",
+  "price|cost|how much": "Prices vary by service. Contact us on WhatsApp +20 01121787677 for a custom quote.",
+  "consultation|free": "Yes! We offer a free initial consultation. Contact us on +20 01121787677 🎉",
+  "saudi|uae|kuwait|gulf": "Yes! We have presence in Saudi Arabia, UAE and Kuwait.",
+  "thank|thanks|great": "Thank you! 😊 Akaber is always at your service: +20 01121787677"
+};
+
+function getReply(txt) {
+  var lower = txt.toLowerCase();
+  var kb = lang === "ar" ? KB_AR : KB_EN;
+  var keys = Object.keys(kb);
+  for (var i = 0; i < keys.length; i++) {
+    var patterns = keys[i].split("|");
+    for (var j = 0; j < patterns.length; j++) {
+      if (lower.indexOf(patterns[j]) !== -1) return kb[keys[i]];
+    }
+  }
+  return lang === "ar" 
+    ? "شكراً لسؤالك! تواصل معنا: 📞 01121787677 | 📧 mmzalsebaeii18@gmail.com"
+    : "Thanks! Contact us: 📞 +20 01121787677 | 📧 mmzalsebaeii18@gmail.com";
+}
+
+function addBotMsg(txt) {
+  var msgs = document.getElementById("chatMsgs");
+  var typing = document.createElement("div");
+  typing.className = "chat-typing";
+  typing.innerHTML = "<span></span><span></span><span></span>";
+  msgs.appendChild(typing);
+  msgs.scrollTop = msgs.scrollHeight;
+  setTimeout(function() {
+    typing.remove();
+    var msg = document.createElement("div");
+    msg.className = "chat-msg bot";
+    msg.textContent = txt;
+    msgs.appendChild(msg);
+    msgs.scrollTop = msgs.scrollHeight;
+  }, 700);
+}
+
+function addUserMsg(txt) {
+  var msgs = document.getElementById("chatMsgs");
+  var msg = document.createElement("div");
+  msg.className = "chat-msg usr";
+  msg.textContent = txt;
+  msgs.appendChild(msg);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function buildChatQBtns() {
+  var qrow = document.getElementById("chatQrow");
+  if (!qrow) return;
+  var t = T[lang];
+  qrow.innerHTML = "";
+  for (var i = 0; i < t.chatQ.length; i++) {
+    var btn = document.createElement("button");
+    btn.className = "chat-qbtn";
+    btn.textContent = t.chatQ[i];
+    btn.onclick = function() { sendQuick(this.textContent); };
+    qrow.appendChild(btn);
+  }
+}
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  document.getElementById("chatWin").classList.toggle("open", chatOpen);
+  if (chatOpen && !chatInited) {
+    chatInited = true;
+    buildChatQBtns();
+    setTimeout(function() {
+      addBotMsg(lang === "ar" ? "أهلاً! 👋 أنا مساعد أكابر الذكي." : "Hello! 👋 I am Akaber AI Assistant.");
+    }, 300);
+    setTimeout(function() {
+      addBotMsg(lang === "ar" ? "كيف يمكنني مساعدتك اليوم؟" : "How can I help you today?");
+    }, 1100);
+  }
+}
+
+function sendChat() {
+  var inp = document.getElementById("chatIn");
+  var txt = inp.value.trim();
+  if (!txt) return;
+  addUserMsg(txt);
+  inp.value = "";
+  var reply = getReply(txt);
+  setTimeout(function() { addBotMsg(reply); }, 200);
+}
+
+function sendQuick(txt) {
+  addUserMsg(txt);
+  var reply = getReply(txt);
+  setTimeout(function() { addBotMsg(reply); }, 200);
+}
+
+document.getElementById("chatIn").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") sendChat();
+});
+
+// ===== COOKIE =====
+function acceptCookie() {
+  localStorage.setItem("akaber-cookies", "1");
+  document.getElementById("cookieBar").classList.remove("show");
+}
+setTimeout(function() {
+  if (!localStorage.getItem("akaber-cookies")) {
+    document.getElementById("cookieBar").classList.add("show");
+  }
+}, 2500);
+
+// ===== INIT =====
+applyLang();
+observeReveals();
+</script>
+</body>
+</html>
